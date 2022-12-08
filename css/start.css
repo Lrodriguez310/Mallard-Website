@@ -1,0 +1,90 @@
+/* 1. Header Styles */
+/* 2. Navgation Styles */
+/* 3. Heading Styles */
+/* 4. Body Styles */
+/* 5. Footer Styles */
+/* 6. Media Queries */
+
+
+@import url();
+
+
+/* 1. Header Styles */
+
+
+/* 2. Navgation Styles */
+
+
+/* 3. Heading Styles */
+.content h2 {
+    font-size: 3em;
+}
+
+/* 4. Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', san-serif;
+}
+
+body {
+    background: #222;
+    min-height: 200vh;
+}
+
+section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+section .side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section .side#side1 {
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+section .side#side2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+section .side video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+    padding-top: 150vh;
+    margin-top: 50vh;
+}
+.content p {
+    font-size: 1.2em;
+}
+/* 5. Footer Styles */
+
+
+/* 6. Media Queries */
+
+
+
+
+
+
+
