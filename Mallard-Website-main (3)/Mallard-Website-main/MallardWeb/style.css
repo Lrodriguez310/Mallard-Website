@@ -111,7 +111,7 @@ img {
 nav {
     background: transparent;
     width: 100vw;
-    height: 5rem;
+    height: 6rem;
     position: fixed;
     top: 0;
     z-index: 11;
@@ -131,6 +131,12 @@ nav {
     align-items: center;
 }
 
+.nav__container img {
+    width: 50px;
+    margin-left: 13px;
+    margin-top: 8px;
+}
+
 nav button {
     display: none;
 }
@@ -139,10 +145,11 @@ nav button {
     display: flex;
     align-items: center;
     gap: 4rem;
+    margin-top: 55px;
 }
 
 .nav__menu a {
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: var(--transition);
 }
 
@@ -393,6 +400,11 @@ footer {
     margin: 0 0 2rem;
 }
 
+.footer__1 img {
+    width: 60px;
+    margin-left: 8px;
+}
+
 footer ul li {
     margin-bottom: 0.7rem;
 }
@@ -597,6 +609,10 @@ footer ul li a:hover {
 
     .footer__1 p {
         margin: 1rem auto;
+    }
+
+    .footer__1 img {
+        margin-left: 195px;
     }
 
     .footer__socials {
