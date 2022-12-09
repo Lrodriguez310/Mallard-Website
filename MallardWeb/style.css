@@ -111,6 +111,13 @@ nav {
     z-index: 11;
 }
 
+/* change nav style with javascript */
+
+.window-scroll {
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
 .nav__container {
     height: 100%;
     display: flex;
@@ -149,6 +156,7 @@ header {
 header .header__img {
     border-radius: 200px;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
 }
 
 header .header__img:hover {
@@ -207,4 +215,150 @@ header .header__img:hover {
 
 .category:hover {
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.category:nth-child(2) .category__icon{
+    background: var(--color-danger);
+}
+.category:nth-child(3) .category__icon{
+    background: var(--color-success);
+}
+.category:nth-child(4) .category__icon{
+    background: var(--color-warning);
+}
+.category:nth-child(5) .category__icon{
+    background: var(--color-success);
+}
+
+
+
+.category__icon {
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+}
+
+.category p {
+    font-size: 0.85rem;
+}
+
+/*  Events courses */
+
+.courses {
+    margin-top: 10rem;
+}
+
+.courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.course__info {
+    padding: 2rem;
+}
+
+.course__info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+/* faqs */
+
+.faqs {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faqs__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.faq__icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+.faq p {
+    margin-top: 0.8rem;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+}
+
+/* testimon */
+.testimonials__container {
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.testimonial {
+    padding-top: 2rem;
+}
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+}
+
+.testimonial__info {
+    text-align: center;
+}
+
+.testimonial__body {
+    background: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial__body::before {
+    content: "";
+    display: block;
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
 }
