@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="start.css">
+    <title>Mallard Split vid</title>
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="ocean.mp4" type="video/mp4" autoplay loop
+            muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="ocean.mp4" type="video/mp4" autoplay loop
+            muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2> Logo goes here? </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Autem totam, suscipit dolore harum repellendus incidunt itaque,
+              consequatur explicabo maiores labore consequuntur? 
+              Explicabo nobis animi maiores delectus? Est voluptatem
+              dolores mollitia consequuntur distinctio dignissimos ipsam 
+              modi in voluptate, similique maiores molestiae
+             reiciendis alias error sunt magni autem voluptatum ullam at fuga.
+        </p>
+    </div>
+
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll', function(){
+            side1.style.left = -window.pageYOffset+'px';
+            side2.style.left = window.pageYOffset+'px';
+        })
+    </script>
+</body>
+</html>
