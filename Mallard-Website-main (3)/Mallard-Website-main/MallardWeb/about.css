@@ -1,8 +1,6 @@
 .about__achievements {
     margin-top: 3rem;
 }
-
-
 .about__achievements-container {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -147,5 +145,25 @@
 
     .team__member {
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .achievements__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team__member {
+        padding: 0;
+    }
+
+    .team__member p {
+        margin-bottom: 1.5rem;
     }
 }

@@ -47,3 +47,57 @@ const closeNav = () => {
 }
 
 closeBtn.addEventListener('click', closeNav)
+
+
+
+
+
+const images = document.getElementsByClassName("image");
+
+let globalIndex = 0;
+    last = { x:0, y:0 };
+
+const activate = (image, x, y) => {
+    image.style.left = `${x}px`;
+    image.style.top = `${y}px`;
+
+    image.dataset.status = "active";
+
+    last = { x, y };
+}
+
+const distanceFromLast = (x, y) => {
+    return Math.hypot(x - last.x, y - last.y);
+}
+
+window.onmousemove = e => {
+
+    if(distanceFromLast(e.clientX, e.clientY) > 100) {
+    const lead = images[globalIndex % images.length];
+          tail = images[(globalIndex - 5) % images.length];
+
+    activate(lead, e.clientX, e.clientY);
+
+    if(tail) tail.dataset.status = "inactive";
+
+    globalIndex++;
+  }
+}
+
+// for bubble
+
+/*const wrapper = document.getElementById("bubble-wrapper");
+
+const animateBubble = x => {
+    const bubble = document.createElement("div");
+
+    bubble.className = "bubble";
+
+    bubble.style.left = `${x}px`;
+
+    wrapper.appendChild(bubble);
+
+    setTimeout(() => wrapper.removeChild(bubble), 2000);
+}
+
+window.onmousemove = e => animateBubble(e.clientX); */
